@@ -30,7 +30,7 @@
     "enemies": [
       { "name": "Hound", "icon": "assets/imgData/enemies/hound.png" },
       { "name": "Shadow hunter", "icon": "assets/imgData/enemies/shadow-hunter.png" },
-      { "name": "Shadow warrior", "icon": "assets/imgData/enemies/shadow-warrior.png" },
+      { "name": "Shadow warrior", "icon": "assets/imgData/enemies/shdow-warrior.png" },
       { "name": "bully-minion", "icon": "assets/imgData/enemies/bully-minion.png"},
       { "name": "Grota the Gnome" , "icon": "assets/imgData/enemies/gnome.png"}
     ]

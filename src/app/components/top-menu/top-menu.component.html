@@ -1,0 +1,14 @@
+<div class="toggle">
+  <button type="button" (click)="toggleMapMenu()">Toggle Map Menu</button>
+  @if (openMapMenu){
+  <div class="top-menu">
+  @if(maps.length > 0){
+    @for ( map of maps;track $index) {
+      <button (click)="onMapClick(map)">
+        {{ map.name }}
+      </button>
+    }
+  }
+</div>}
+</div>
+

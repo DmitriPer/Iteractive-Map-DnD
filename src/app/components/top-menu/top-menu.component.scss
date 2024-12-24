@@ -1,0 +1,26 @@
+.top-menu {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #f0f0f0;
+
+
+}
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(26, 26, 26, 0.9);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(26, 26, 26);
+  }
+}
+.toggle {
+  padding: 5px;
+  background-color: #f0f0f0;
+}

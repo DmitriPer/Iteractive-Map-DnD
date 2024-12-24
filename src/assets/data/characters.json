@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Doin Yomama",
+    "role": "bard",
+    "lvl": 5,
+    "icons": [
+      { "icon": "assets/imgData/characters/bard-gnome.png", "title": "bard" }
+    ]
+  },
+  {
+    "name": "Johny Woods",
+    "role": "druid",
+    "lvl": 5,
+    "icons": [
+      { "icon": "assets/imgData/characters/druid.png", "title": "druid" }
+    ]
+  },
+  {
+    "name": "Aidon Terstand",
+    "role": "hunter",
+    "lvl": 5,
+    "icons": [
+      { "icon": "assets/imgData/characters/hunter.png", "title": "hunter" }
+    ]
+  },
+  {
+    "name": "Nabu",
+    "role": "wizard",
+    "lvl": 5,
+    "icons": [
+      { "icon": "assets/imgData/characters/wizard.png", "title": "wizard" }
+    ]
+  },
+  {
+    "name": "Alexandra",
+    "role": "fighter",
+    "lvl": 5,
+    "icons": [
+      { "icon": "assets/imgData/characters/fighter.png", "title": "fighter" }
+    ]
+  }
+]

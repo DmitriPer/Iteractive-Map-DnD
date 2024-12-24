@@ -1,0 +1,65 @@
+[
+  {
+    "mapName": "1",
+    "enemies": [
+      { "name": "Raven", "icon": "assets/imgData/enemies/raven.png" },
+      { "name": "Distortion Wolf", "icon": "assets/imgData/enemies/wolf-head.png" }
+    ]
+  },
+  {
+    "mapName": "2",
+    "enemies": [
+      { "name": "Witch Milenda", "icon": "assets/imgData/enemies/witch.png" },
+      { "name": "minion", "icon": "assets/imgData/enemies/evil-minion.png" }
+    ]
+  },
+  {
+    "mapName": "2.2",
+    "enemies": [
+      { "name": "Witch Milenda", "icon": "assets/imgData/enemies/witch.png" },
+      { "name": "minion", "icon": "assets/imgData/enemies/evil-minion.png" }
+    ]
+  },
+  {
+    "mapName": "3",
+    "enemies": [
+    ]
+  },
+  {
+    "mapName": "3.5",
+    "enemies": [
+      { "name": "Hound", "icon": "assets/imgData/enemies/hound.png" },
+      { "name": "Shadow hunter", "icon": "assets/imgData/enemies/shadow-hunter.png" },
+      { "name": "Shadow warrior", "icon": "assets/imgData/enemies/shadow-warrior.png" },
+      { "name": "bully-minion", "icon": "assets/imgData/enemies/bully-minion.png"},
+      { "name": "Grota the Gnome" , "icon": "assets/imgData/enemies/gnome.png"}
+    ]
+  },
+  {
+    "mapName": "4",
+    "enemies": [
+      { "name": "Lairn", "icon": "assets/imgData/enemies/elf.png" },
+      { "name": "Rina", "icon": "assets/imgData/enemies/woman-elf.png" }
+    ]
+  },
+  {
+    "mapName": "5",
+    "enemies": [
+      { "name": "Dorgash Tolgor", "icon": "assets/imgData/enemies/orc.png" }
+    ]
+  },
+  {
+    "mapName": "6",
+    "enemies": [
+      { "name": "Elf statue", "icon": "assets/imgData/enemies/elf-statue.png" }
+    ]
+  },
+  {
+    "mapName": "7",
+    "enemies": [
+      { "name": "Prosta tutka", "icon": "assets/imgData/enemies/prosta.png" },
+      { "name": "Hooded Dark Wizard", "icon": "assets/imgData/enemies/hooded-bober.png" },
+      { "name": "Dark Bober", "icon": "assets/imgData/enemies/BoberBoss.png" }
+    ]
+  }
+]

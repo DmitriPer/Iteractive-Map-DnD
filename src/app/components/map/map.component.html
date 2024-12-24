@@ -1,0 +1,43 @@
+<div class="map"  [ngStyle]="mapStyles">
+  @for (placedIcon of placedIcons;track placedIcon.icon) {
+    <img
+      [src]="placedIcon.icon"
+      [alt]="placedIcon.title"
+      class="placed-icon"
+      cdkDrag
+      (cdkDragMoved)="onDragMoved($event, placedIcon)"
+      (cdkDragEnded)="onDragEnd()"
+      [style.left.px]="'1000'"
+      [style.top.px]="'1000'"
+      (dblclick)="removeIcon(placedIcon)"
+    />
+  }
+  @for (enemyIcon of enemyIcons;track enemyIcon.icon) {
+    @if(enemyIcon.name === 'Hooded Dark Wizard' || enemyIcon.name === 'Dark Bober'){
+      <img
+        [src]="enemyIcon.icon"
+        [alt]="enemyIcon.name"
+        class="boss-icon"
+        cdkDrag
+        (cdkDragMoved)="onDragMoved($event, enemyIcon)"
+        (cdkDragEnded)="onDragEnd()"
+        [style.left.px]="'500'"
+        [style.top.px]="'500'"
+        (dblclick)="removeEnemy(enemyIcon)"
+      />
+    }@else{
+      <img
+        [src]="enemyIcon.icon"
+        [alt]="enemyIcon.name"
+        class="placed-icon"
+        cdkDrag
+        (cdkDragMoved)="onDragMoved($event, enemyIcon)"
+        (cdkDragEnded)="onDragEnd()"
+        [style.left.px]="'500'"
+        [style.top.px]="'500'"
+        (dblclick)="removeEnemy(enemyIcon)"
+      />
+    }
+
+  }
+</div>

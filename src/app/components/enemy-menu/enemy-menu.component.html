@@ -1,0 +1,13 @@
+<div class="enemy-menu">
+  <button (click)="toggleMenu()">Toggle Enemy Menu</button>
+  @if (!showMenu) {
+  <div class="enemy-list">
+    @for ( enemy of enemies; track $index) {
+      <div class="enemy-item" (click)="onEnemyIconClick(enemy)">
+        <img [src]="enemy.icon" [alt]="enemy.name"/>
+        <span>{{ enemy.name }}</span>
+      </div>
+    }
+  </div>
+  }
+</div>

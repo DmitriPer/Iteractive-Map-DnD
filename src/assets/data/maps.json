@@ -1,0 +1,38 @@
+[
+  {
+    "name": "1",
+    "path": "assets/imgData/maps/Act1.jpg"
+  },
+  {
+    "name": "2",
+    "path": "assets/imgData/maps/Act2.jpg"
+  },
+  {
+    "name": "2.2",
+    "path": "assets/imgData/maps/Act2Dark.jpg"
+  },
+  {
+    "name": "3",
+    "path": "assets/imgData/maps/Act3.jpg"
+  },
+  {
+  "name": "3.5",
+  "path": "assets/imgData/maps/Act3.5.jpg"
+},
+  {
+  "name": "4",
+  "path": "assets/imgData/maps/Act4.jpg"
+},
+  {
+  "name": "5",
+  "path": "assets/imgData/maps/Act5.jpg"
+},
+  {
+  "name": "6",
+  "path": "assets/imgData/maps/Act6.jpg"
+},
+  {
+    "name": "7",
+    "path": "assets/imgData/maps/Act7.jpg"
+  }
+]

@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 95vh;
+}
+
+app-map {
+  flex: 1;
+  position: relative;
+  height: 5vh;
+}
+
+app-character-menu {
+  width: 130px;
+  border-left: 1px solid #ddd;
+  background-color: #f9f9f9;
+}

@@ -24,19 +24,20 @@
     ]
   },
   {
+    "name": "Alexandra",
+    "role": "fighter",
+    "lvl": 5,
+    "icons": [
+      { "icon": "assets/imgData/characters/fighter.png", "title": "fighter" 
+      },
+  {
     "name": "Nabu The Forsaken",
     "role": "wizard",
     "lvl": 5,
     "icons": [
       { "icon": "assets/imgData/characters/wizard.png", "title": "wizard" }
     ]
-  },
-  {
-    "name": "Alexandra",
-    "role": "fighter",
-    "lvl": 5,
-    "icons": [
-      { "icon": "assets/imgData/characters/fighter.png", "title": "fighter" }
+  }
     ]
   }
 ]

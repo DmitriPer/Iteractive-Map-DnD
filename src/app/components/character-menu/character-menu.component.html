@@ -1,7 +1,7 @@
 <div class="character-menu">
   @for (character of characters ; track $index){
   <div class="character-item">
-    <h4 class="name">{{$index+1}} {{ character.name }}</h4>
+    <h4 class="name">{{$index+1}}. {{ character.name }}</h4>
     <h4 class="role">{{ character.role }}</h4>
     @for ( icon of character.icons ; track $index){
       <img [src]="icon.icon"

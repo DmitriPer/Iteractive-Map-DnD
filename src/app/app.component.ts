@@ -18,7 +18,7 @@ export class AppComponent {
   title = 'interactive-map';
   placedIcons: MapIcon[] = [];
   placedEnemies:Enemy[]=[];
-  currentMapPath = '/assets/imgData/maps/Act1.jpg'; // מפה ברירת מחדל
+  currentMapPath = '/assets/imgData/maps/Act.jpg';
   currentMapName = '1';
 
   onMapSelected(map:{name:string;path:string }): void {

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Doin Yemama Jr.",
+    "name": "Doin Yomama",
     "role": "bard",
     "lvl": 5,
     "icons": [
@@ -28,14 +28,15 @@
     "role": "fighter",
     "lvl": 5,
     "icons": [
-      { "icon": "assets/imgData/characters/fighter.png", "title": "fighter" 
-      },
+      { "icon": "assets/imgData/characters/fighter.png", "title": "fighter" }
+    ]
+  },
   {
-    "name": "Nabu The Forsaken",
+    "name": "Nabu",
     "role": "wizard",
     "lvl": 5,
     "icons": [
       { "icon": "assets/imgData/characters/wizard.png", "title": "wizard" }
-       ]
-      }
+    ]
+  }
 ]

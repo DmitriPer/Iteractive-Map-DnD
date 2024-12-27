@@ -18,7 +18,7 @@ export class AppComponent {
   title = 'interactive-map';
   placedIcons: MapIcon[] = [];
   placedEnemies:Enemy[]=[];
-  currentMapPath = '/assets/imgData/maps/Act.jpg';
+  currentMapPath = '/assets/imgData/maps/First_Logo.png';
   currentMapName = '1';
 
   onMapSelected(map:{name:string;path:string }): void {

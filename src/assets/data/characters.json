@@ -30,13 +30,5 @@
     "icons": [
       { "icon": "assets/imgData/characters/fighter.png", "title": "fighter" }
     ]
-  },
-  {
-    "name": "Nabu",
-    "role": "wizard",
-    "lvl": 5,
-    "icons": [
-      { "icon": "assets/imgData/characters/wizard.png", "title": "wizard" }
-    ]
   }
 ]

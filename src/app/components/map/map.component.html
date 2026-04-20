@@ -7,8 +7,8 @@
       cdkDrag
       (cdkDragMoved)="onDragMoved($event, placedIcon)"
       (cdkDragEnded)="onDragEnd()"
-      [style.left.px]="'1000'"
-      [style.top.px]="'1000'"
+      [style.left.px]="placedIcon.x"
+      [style.top.px]="placedIcon.y"
       (dblclick)="removeIcon(placedIcon)"
     />
   }
@@ -21,8 +21,8 @@
         cdkDrag
         (cdkDragMoved)="onDragMoved($event, enemyIcon)"
         (cdkDragEnded)="onDragEnd()"
-        [style.left.px]="'500'"
-        [style.top.px]="'500'"
+        [style.left.px]="enemyIcon.x"
+        [style.top.px]="enemyIcon.y"
         (dblclick)="removeEnemy(enemyIcon)"
       />
     }@else{
@@ -33,8 +33,8 @@
         cdkDrag
         (cdkDragMoved)="onDragMoved($event, enemyIcon)"
         (cdkDragEnded)="onDragEnd()"
-        [style.left.px]="'500'"
-        [style.top.px]="'500'"
+        [style.left.px]="enemyIcon.x"
+        [style.top.px]="enemyIcon.y"
         (dblclick)="removeEnemy(enemyIcon)"
       />
     }

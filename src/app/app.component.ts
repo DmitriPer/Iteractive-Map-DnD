@@ -27,10 +27,10 @@ export class AppComponent {
   }
 
   onIconSelected(icon: { icon: string; title: string }): void {
-    this.placedIcons.push(icon);
+    this.placedIcons.push({ ...icon, x: 0, y: 0 });
   }
 
   onEnemySelected(enemy: Enemy): void {
-   this.placedEnemies.push(enemy)
+    this.placedEnemies.push({ ...enemy, x: 0, y: 0 });
   }
 }

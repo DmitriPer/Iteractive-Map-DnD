@@ -15,18 +15,12 @@ export class MapComponent implements OnChanges {
   @Input() placedIcons: MapIcon[] = [];
   @Input() enemyIcons: PlacedEnemy[] = [];
   @Input() backgroundUrl!: string;
-  mapStyles = {};
+  backgroundStyle = {};
 
   ngOnChanges(): void {
     if (this.backgroundUrl) {
-      const img = new Image();
-      img.src = this.backgroundUrl;
-      img.onload = () => {
-        this.mapStyles = {
-          'background-image': `url(${this.backgroundUrl})`,
-          width: `${img.width}px`,
-          height: `${img.height}px`,
-        };
+      this.backgroundStyle = {
+        'background-image': `url(${this.backgroundUrl})`,
       };
     }
   }

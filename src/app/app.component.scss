@@ -1,17 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
-  height: 95vh;
+  height: calc(100vh - 50px);
 }
 
 app-map {
   flex: 1;
-  position: relative;
-  height: 5vh;
+  overflow: hidden;
 }
 
 app-character-menu {
   width: 130px;
   border-left: 1px solid #ddd;
   background-color: #f0f0f0;
+  overflow-y: auto;
 }

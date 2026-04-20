@@ -3,7 +3,7 @@
   @if (showMenu) {
   <div class="enemy-list">
     @for ( enemy of enemies; track $index) {
-      <div class="enemy-item" (click)="onEnemyIconClick(enemy)">
+      <div class="enemy-item" tabindex="0" (click)="onEnemyIconClick(enemy)" (keydown.enter)="onEnemyIconClick(enemy)">
         <img [src]="enemy.icon" [alt]="enemy.name"/>
         <span>{{ enemy.name }}</span>
       </div>

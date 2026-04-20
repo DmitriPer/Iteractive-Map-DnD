@@ -6,7 +6,9 @@
     @for ( icon of character.icons ; track $index){
       <img [src]="icon.icon"
            [alt]="icon.title"
-           (click)="onCharacterClick(icon)"/>
+           tabindex="0"
+           (click)="onCharacterClick(icon)"
+           (keydown.enter)="onCharacterClick(icon)"/>
     }
   </div>
     <div class="line"></div>

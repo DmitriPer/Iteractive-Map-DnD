@@ -1,6 +1,8 @@
-export interface Enemy {
+export interface EnemyTemplate {
   name: string;
   icon: string;
-  x: number;
-  y: number;
+}
+
+export interface PlacedEnemy extends EnemyTemplate {
+  position: { x: number; y: number };
 }

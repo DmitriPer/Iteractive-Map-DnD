@@ -5,7 +5,7 @@
       [alt]="placedIcon.title"
       class="placed-icon"
       cdkDrag
-      [cdkDragFreeDragPosition]="{x: placedIcon.x, y: placedIcon.y}"
+      [cdkDragFreeDragPosition]="placedIcon.position"
       (cdkDragEnded)="onDragEnd($event, placedIcon)"
       (dblclick)="removeIcon(placedIcon)"
     />
@@ -17,7 +17,7 @@
         [alt]="enemyIcon.name"
         class="boss-icon"
         cdkDrag
-        [cdkDragFreeDragPosition]="{x: enemyIcon.x, y: enemyIcon.y}"
+        [cdkDragFreeDragPosition]="enemyIcon.position"
         (cdkDragEnded)="onDragEnd($event, enemyIcon)"
         (dblclick)="removeEnemy(enemyIcon)"
       />
@@ -27,7 +27,7 @@
         [alt]="enemyIcon.name"
         class="placed-icon"
         cdkDrag
-        [cdkDragFreeDragPosition]="{x: enemyIcon.x, y: enemyIcon.y}"
+        [cdkDragFreeDragPosition]="enemyIcon.position"
         (cdkDragEnded)="onDragEnd($event, enemyIcon)"
         (dblclick)="removeEnemy(enemyIcon)"
       />

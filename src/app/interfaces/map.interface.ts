@@ -1,6 +1,5 @@
 export interface MapIcon {
   icon: string;
   title: string;
-  x: number;
-  y: number;
+  position: { x: number; y: number };
 }

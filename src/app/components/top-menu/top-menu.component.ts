@@ -2,11 +2,10 @@ import {Component, EventEmitter, inject, OnInit, Output} from '@angular/core';
 import {MapsDataService} from '../../services/maps-data.service';
 
 @Component({
-  selector: 'app-top-menu',
-  standalone: true,
-  imports: [],
-  templateUrl: './top-menu.component.html',
-  styleUrl: './top-menu.component.scss'
+    selector: 'app-top-menu',
+    imports: [],
+    templateUrl: './top-menu.component.html',
+    styleUrl: './top-menu.component.scss'
 })
 export class TopMenuComponent implements OnInit {
   @Output() mapSelected = new EventEmitter<{ name:string,path:string }>();

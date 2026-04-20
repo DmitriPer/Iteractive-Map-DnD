@@ -5,11 +5,10 @@ import { EnemyTemplate } from '../../interfaces/enemy.interface';
 import { EnemyDataService } from '../../services/enemy-data.service';
 
 @Component({
-  selector: 'app-enemy-menu',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './enemy-menu.component.html',
-  styleUrl: './enemy-menu.component.scss'
+    selector: 'app-enemy-menu',
+    imports: [CommonModule],
+    templateUrl: './enemy-menu.component.html',
+    styleUrl: './enemy-menu.component.scss'
 })
 export class EnemyMenuComponent implements OnInit {
   @Input() set mapName(value: string) {

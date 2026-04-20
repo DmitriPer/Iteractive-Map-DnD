@@ -5,14 +5,12 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-character-menu',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  templateUrl: './character-menu.component.html',
-  styleUrl: './character-menu.component.scss',
-
+    selector: 'app-character-menu',
+    imports: [
+        CommonModule,
+    ],
+    templateUrl: './character-menu.component.html',
+    styleUrl: './character-menu.component.scss'
 })
 export class CharacterMenuComponent implements OnInit {
   @Output()iconSelected = new EventEmitter<{ icon:string;title:string }>();

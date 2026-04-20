@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { MapComponent } from './components/map/map.component';
 import { CharacterMenuComponent } from './components/character-menu/character-menu.component';
-import { CommonModule } from '@angular/common';
+
 import { MapIcon } from './interfaces/map.interface';
 import { EnemyMenuComponent } from './components/enemy-menu/enemy-menu.component';
 import { EnemyTemplate, PlacedEnemy } from './interfaces/enemy.interface';
@@ -10,7 +10,7 @@ import { EnemyTemplate, PlacedEnemy } from './interfaces/enemy.interface';
 @Component({
     selector: 'app-root',
     host: { style: 'display:flex; flex-direction:column; height:100vh;' },
-    imports: [CommonModule, TopMenuComponent, MapComponent, CharacterMenuComponent, EnemyMenuComponent],
+    imports: [TopMenuComponent, MapComponent, CharacterMenuComponent, EnemyMenuComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

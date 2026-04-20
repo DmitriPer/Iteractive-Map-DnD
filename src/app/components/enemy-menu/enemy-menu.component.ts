@@ -1,12 +1,12 @@
 import { Component, Input, inject, OnInit, Output, EventEmitter } from '@angular/core';
 import { take } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 import { EnemyTemplate } from '../../interfaces/enemy.interface';
 import { EnemyDataService } from '../../services/enemy-data.service';
 
 @Component({
     selector: 'app-enemy-menu',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './enemy-menu.component.html',
     styleUrl: './enemy-menu.component.scss'
 })

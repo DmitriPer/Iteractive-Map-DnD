@@ -5,11 +5,10 @@ import { CdkDragEnd, DragDropModule } from '@angular/cdk/drag-drop';
 import { PlacedEnemy } from '../../interfaces/enemy.interface';
 
 @Component({
-  selector: 'app-map',
-  standalone: true,
-  imports: [CommonModule, DragDropModule],
-  templateUrl: './map.component.html',
-  styleUrl: './map.component.scss'
+    selector: 'app-map',
+    imports: [CommonModule, DragDropModule],
+    templateUrl: './map.component.html',
+    styleUrl: './map.component.scss'
 })
 export class MapComponent implements OnChanges {
   @Input() placedIcons: MapIcon[] = [];

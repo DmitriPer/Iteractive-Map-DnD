@@ -1,17 +1,29 @@
 .main-container {
   display: flex;
   flex-direction: row;
-  height: 95vh;
+  flex: 1;
+  overflow: hidden;
+}
+
+app-top-menu {
+  flex-shrink: 0;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 app-map {
   flex: 1;
   position: relative;
-  height: 5vh;
+  overflow: hidden;
 }
 
 app-character-menu {
   width: 130px;
   border-left: 1px solid #ddd;
   background-color: #f0f0f0;
+  overflow-y: auto;
 }

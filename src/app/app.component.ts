@@ -23,8 +23,11 @@ export class AppComponent {
   currentMapName = '1';
 
   onMapSelected(map: { name: string; path: string }): void {
+    if (this.currentMapPath === map.path) return;
     this.currentMapPath = map.path;
     this.currentMapName = map.name;
+    this.placedIcons = [];
+    this.placedEnemies = [];
   }
 
   onIconSelected(icon: { icon: string; title: string }): void {

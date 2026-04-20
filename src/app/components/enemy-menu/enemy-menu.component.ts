@@ -1,7 +1,7 @@
 import { Component, Input, inject, OnInit, Output, EventEmitter } from '@angular/core';
 import { take } from 'rxjs';
 
-import { EnemyTemplate } from '../../interfaces/enemy.interface';
+import { EnemyMapData, EnemyTemplate } from '../../interfaces/enemy.interface';
 import { EnemyDataService } from '../../services/enemy-data.service';
 
 @Component({
@@ -22,11 +22,11 @@ export class EnemyMenuComponent implements OnInit {
   showMenu = true;
 
   private _mapName = '';
-  private allEnemyData: any[] = [];
+  private allEnemyData: EnemyMapData[] = [];
   private enemyDataService = inject(EnemyDataService);
 
   ngOnInit(): void {
-    this.enemyDataService.getEnemies().pipe(take(1)).subscribe((data: any) => {
+    this.enemyDataService.getEnemies().pipe(take(1)).subscribe((data: EnemyMapData[]) => {
       this.allEnemyData = data;
       this.filterEnemies();
     });
@@ -41,7 +41,7 @@ export class EnemyMenuComponent implements OnInit {
   }
 
   private filterEnemies(): void {
-    const mapData = this.allEnemyData.find((map: any) => map.mapName === this._mapName);
+    const mapData = this.allEnemyData.find((map: EnemyMapData) => map.mapName === this._mapName);
     this.enemies = mapData ? mapData.enemies : [];
   }
 }

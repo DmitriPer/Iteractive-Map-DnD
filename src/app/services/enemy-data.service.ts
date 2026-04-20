@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { EnemyMapData } from '../interfaces/enemy.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EnemyDataService {
-  private enemyDataUrl = 'assets/data/enemies.json'; // נתיב לקובץ ה-JSON
+  private enemyDataUrl = 'assets/data/enemies.json';
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) {}
-
-  getEnemies(): Observable<any> {
-    return this.http.get<any>(this.enemyDataUrl);
+  getEnemies(): Observable<EnemyMapData[]> {
+    return this.http.get<EnemyMapData[]>(this.enemyDataUrl);
   }
 }

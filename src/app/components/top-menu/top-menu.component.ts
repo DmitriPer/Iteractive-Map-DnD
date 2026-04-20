@@ -1,5 +1,6 @@
 import {Component, EventEmitter, inject, OnInit, Output} from '@angular/core';
 import {MapsDataService} from '../../services/maps-data.service';
+import { MapData } from '../../interfaces/map.interface';
 
 @Component({
     selector: 'app-top-menu',
@@ -8,22 +9,22 @@ import {MapsDataService} from '../../services/maps-data.service';
     styleUrl: './top-menu.component.scss'
 })
 export class TopMenuComponent implements OnInit {
-  @Output() mapSelected = new EventEmitter<{ name:string,path:string }>();
+  @Output() mapSelected = new EventEmitter<MapData>();
   private mapService = inject(MapsDataService);
-  maps:any = [];
-  public openMapMenu:boolean = false;
+  maps: MapData[] = [];
+  openMapMenu = false;
 
   ngOnInit(): void {
-    this.mapService.getMaps().subscribe((maps: any[]) => {
+    this.mapService.getMaps().subscribe((maps: MapData[]) => {
       this.maps = maps;
     });
   }
 
-  onMapClick(map:{name:string,path:string}): void {
+  onMapClick(map: MapData): void {
     this.mapSelected.emit(map);
   }
 
   toggleMapMenu(): void {
-    this.openMapMenu =!this.openMapMenu;
+    this.openMapMenu = !this.openMapMenu;
   }
 }

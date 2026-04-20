@@ -3,3 +3,8 @@ export interface MapIcon {
   title: string;
   position: { x: number; y: number };
 }
+
+export interface MapData {
+  name: string;
+  path: string;
+}

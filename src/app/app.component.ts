@@ -10,6 +10,7 @@ import { EnemyTemplate, PlacedEnemy } from './interfaces/enemy.interface';
 @Component({
   selector: 'app-root',
   standalone: true,
+  host: { style: 'display:flex; flex-direction:column; height:100vh;' },
   imports: [CommonModule, TopMenuComponent, MapComponent, CharacterMenuComponent, EnemyMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

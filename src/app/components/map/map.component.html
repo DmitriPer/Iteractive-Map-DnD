@@ -1,43 +1,36 @@
-<div class="map"  [ngStyle]="mapStyles">
-  @for (placedIcon of placedIcons;track placedIcon.icon) {
+<div class="map" [ngStyle]="mapStyles">
+  @for (placedIcon of placedIcons; track placedIcon.icon) {
     <img
       [src]="placedIcon.icon"
       [alt]="placedIcon.title"
       class="placed-icon"
       cdkDrag
-      (cdkDragMoved)="onDragMoved($event, placedIcon)"
-      (cdkDragEnded)="onDragEnd()"
-      [style.left.px]="placedIcon.x"
-      [style.top.px]="placedIcon.y"
+      [cdkDragFreeDragPosition]="{x: placedIcon.x, y: placedIcon.y}"
+      (cdkDragEnded)="onDragEnd($event, placedIcon)"
       (dblclick)="removeIcon(placedIcon)"
     />
   }
-  @for (enemyIcon of enemyIcons;track enemyIcon.icon) {
-    @if(enemyIcon.name === 'Hooded Dark Wizard' || enemyIcon.name === 'Dark Bober'){
+  @for (enemyIcon of enemyIcons; track enemyIcon.icon) {
+    @if (enemyIcon.name === 'Hooded Dark Wizard' || enemyIcon.name === 'Dark Bober') {
       <img
         [src]="enemyIcon.icon"
         [alt]="enemyIcon.name"
         class="boss-icon"
         cdkDrag
-        (cdkDragMoved)="onDragMoved($event, enemyIcon)"
-        (cdkDragEnded)="onDragEnd()"
-        [style.left.px]="enemyIcon.x"
-        [style.top.px]="enemyIcon.y"
+        [cdkDragFreeDragPosition]="{x: enemyIcon.x, y: enemyIcon.y}"
+        (cdkDragEnded)="onDragEnd($event, enemyIcon)"
         (dblclick)="removeEnemy(enemyIcon)"
       />
-    }@else{
+    } @else {
       <img
         [src]="enemyIcon.icon"
         [alt]="enemyIcon.name"
         class="placed-icon"
         cdkDrag
-        (cdkDragMoved)="onDragMoved($event, enemyIcon)"
-        (cdkDragEnded)="onDragEnd()"
-        [style.left.px]="enemyIcon.x"
-        [style.top.px]="enemyIcon.y"
+        [cdkDragFreeDragPosition]="{x: enemyIcon.x, y: enemyIcon.y}"
+        (cdkDragEnded)="onDragEnd($event, enemyIcon)"
         (dblclick)="removeEnemy(enemyIcon)"
       />
     }
-
   }
 </div>

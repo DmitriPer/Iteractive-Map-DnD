@@ -3,34 +3,34 @@ import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { MapComponent } from './components/map/map.component';
 import { CharacterMenuComponent } from './components/character-menu/character-menu.component';
 import { CommonModule } from '@angular/common';
-import {MapIcon} from './interfaces/map.interface';
-import {EnemyMenuComponent} from './components/enemy-menu/enemy-menu.component';
-import {Enemy} from './interfaces/enemy.interface'
+import { MapIcon } from './interfaces/map.interface';
+import { EnemyMenuComponent } from './components/enemy-menu/enemy-menu.component';
+import { EnemyTemplate, PlacedEnemy } from './interfaces/enemy.interface';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,TopMenuComponent,MapComponent,CharacterMenuComponent,EnemyMenuComponent],
+  imports: [CommonModule, TopMenuComponent, MapComponent, CharacterMenuComponent, EnemyMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'interactive-map';
   placedIcons: MapIcon[] = [];
-  placedEnemies:Enemy[]=[];
+  placedEnemies: PlacedEnemy[] = [];
   currentMapPath = '/assets/imgData/maps/First_Logo.png';
   currentMapName = '1';
 
-  onMapSelected(map:{name:string;path:string }): void {
+  onMapSelected(map: { name: string; path: string }): void {
     this.currentMapPath = map.path;
     this.currentMapName = map.name;
   }
 
   onIconSelected(icon: { icon: string; title: string }): void {
-    this.placedIcons.push(icon);
+    this.placedIcons.push({ ...icon, position: { x: 0, y: 0 } });
   }
 
-  onEnemySelected(enemy: Enemy): void {
-   this.placedEnemies.push(enemy)
+  onEnemySelected(enemy: EnemyTemplate): void {
+    this.placedEnemies.push({ ...enemy, position: { x: 0, y: 0 } });
   }
 }

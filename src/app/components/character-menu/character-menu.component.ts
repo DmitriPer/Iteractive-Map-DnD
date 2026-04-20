@@ -1,4 +1,4 @@
-import {Component, EventEmitter, inject, Output} from '@angular/core';
+import {Component, EventEmitter, inject, OnInit, Output} from '@angular/core';
 import { CharacterDataService } from '../../services/character-data.service';
 import { Character } from '../../interfaces/characters.interface';
 import { CommonModule } from '@angular/common';
@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './character-menu.component.scss',
 
 })
-export class CharacterMenuComponent {
+export class CharacterMenuComponent implements OnInit {
   @Output()iconSelected = new EventEmitter<{ icon:string;title:string }>();
   private characterService = inject(CharacterDataService);
   public characters: Character[] = [];

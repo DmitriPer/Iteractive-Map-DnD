@@ -1,14 +1,12 @@
 import {Component, EventEmitter, inject, OnInit, Output} from '@angular/core';
 import { CharacterDataService } from '../../services/character-data.service';
 import { Character } from '../../interfaces/characters.interface';
-import { CommonModule } from '@angular/common';
+
 
 
 @Component({
     selector: 'app-character-menu',
-    imports: [
-        CommonModule,
-    ],
+    imports: [],
     templateUrl: './character-menu.component.html',
     styleUrl: './character-menu.component.scss'
 })

@@ -1,11 +1,11 @@
-<div class="map" [ngStyle]="backgroundStyle">
+<div class="map" #mapContainer [ngStyle]="backgroundStyle">
   @for (token of tokens; track token.id) {
     <img
       [src]="token.imageUrl"
       [alt]="token.name"
       [class]="token.type === 'boss' ? 'boss-icon' : 'placed-icon'"
       cdkDrag
-      [cdkDragFreeDragPosition]="token.position"
+      [cdkDragFreeDragPosition]="getPixelPosition(token)"
       (cdkDragEnded)="onDragEnd($event, token)"
       (dblclick)="removeToken(token)"
     />

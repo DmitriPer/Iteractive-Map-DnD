@@ -1,36 +1,13 @@
 <div class="map" [ngStyle]="backgroundStyle">
-  @for (placedIcon of placedIcons; track placedIcon.icon) {
+  @for (token of tokens; track token.id) {
     <img
-      [src]="placedIcon.icon"
-      [alt]="placedIcon.title"
-      class="placed-icon"
+      [src]="token.imageUrl"
+      [alt]="token.name"
+      [class]="token.type === 'boss' ? 'boss-icon' : 'placed-icon'"
       cdkDrag
-      [cdkDragFreeDragPosition]="placedIcon.position"
-      (cdkDragEnded)="onDragEnd($event, placedIcon)"
-      (dblclick)="removeIcon(placedIcon)"
+      [cdkDragFreeDragPosition]="token.position"
+      (cdkDragEnded)="onDragEnd($event, token)"
+      (dblclick)="removeToken(token)"
     />
-  }
-  @for (enemyIcon of enemyIcons; track enemyIcon.icon) {
-    @if (enemyIcon.name === 'Hooded Dark Wizard' || enemyIcon.name === 'Dark Bober') {
-      <img
-        [src]="enemyIcon.icon"
-        [alt]="enemyIcon.name"
-        class="boss-icon"
-        cdkDrag
-        [cdkDragFreeDragPosition]="enemyIcon.position"
-        (cdkDragEnded)="onDragEnd($event, enemyIcon)"
-        (dblclick)="removeEnemy(enemyIcon)"
-      />
-    } @else {
-      <img
-        [src]="enemyIcon.icon"
-        [alt]="enemyIcon.name"
-        class="placed-icon"
-        cdkDrag
-        [cdkDragFreeDragPosition]="enemyIcon.position"
-        (cdkDragEnded)="onDragEnd($event, enemyIcon)"
-        (dblclick)="removeEnemy(enemyIcon)"
-      />
-    }
   }
 </div>

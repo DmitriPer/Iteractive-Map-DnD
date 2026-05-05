@@ -1,6 +1,6 @@
 <app-top-menu (mapSelected)="onMapSelected($event)"></app-top-menu>
 <div class="main-container">
   <app-character-menu (iconSelected)="onIconSelected($event)"></app-character-menu>
-  <app-map [placedIcons]="placedIcons" [backgroundUrl]="currentMapPath" [enemyIcons]="placedEnemies"></app-map>
+  <app-map [tokens]="placedTokens" [backgroundUrl]="currentMapPath"></app-map>
   <app-enemy-menu [mapName]="currentMapName" (iconSelected)="onEnemySelected($event)"></app-enemy-menu>
 </div>

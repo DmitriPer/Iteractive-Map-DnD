@@ -3,10 +3,6 @@ export interface EnemyTemplate {
   icon: string;
 }
 
-export interface PlacedEnemy extends EnemyTemplate {
-  position: { x: number; y: number };
-}
-
 export interface EnemyMapData {
   mapName: string;
   enemies: EnemyTemplate[];

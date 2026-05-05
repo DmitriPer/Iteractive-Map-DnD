@@ -1,8 +1,7 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MapIcon } from '../../interfaces/map.interface';
 import { CdkDragEnd, DragDropModule } from '@angular/cdk/drag-drop';
-import { PlacedEnemy } from '../../interfaces/enemy.interface';
+import { Token } from '../../models/token.model';
 
 @Component({
     selector: 'app-map',
@@ -11,8 +10,7 @@ import { PlacedEnemy } from '../../interfaces/enemy.interface';
     styleUrl: './map.component.scss'
 })
 export class MapComponent implements OnChanges {
-  @Input() placedIcons: MapIcon[] = [];
-  @Input() enemyIcons: PlacedEnemy[] = [];
+  @Input() tokens: Token[] = [];
   @Input() backgroundUrl!: string;
   backgroundStyle = {};
 
@@ -24,21 +22,14 @@ export class MapComponent implements OnChanges {
     }
   }
 
-  onDragEnd(event: CdkDragEnd, icon: MapIcon | PlacedEnemy): void {
-    icon.position = event.source.getFreeDragPosition();
+  onDragEnd(event: CdkDragEnd, token: Token): void {
+    token.position = event.source.getFreeDragPosition();
   }
 
-  removeIcon(icon: MapIcon): void {
-    const index = this.placedIcons.indexOf(icon);
+  removeToken(token: Token): void {
+    const index = this.tokens.indexOf(token);
     if (index !== -1) {
-      this.placedIcons.splice(index, 1);
-    }
-  }
-
-  removeEnemy(enemy: PlacedEnemy): void {
-    const index = this.enemyIcons.indexOf(enemy);
-    if (index !== -1) {
-      this.enemyIcons.splice(index, 1);
+      this.tokens.splice(index, 1);
     }
   }
 }
